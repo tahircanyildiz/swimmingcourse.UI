@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {}
+
+@font-face {
+  font-family: "light";
+  src: url("../public/assets/fonts/Gilroy-Light.otf");
+}
+
+@font-face {
+  font-family: "bold";
+  src: url("../public/assets/fonts/Gilroy-ExtraBold.otf");
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+body,
+h2,
+p{
+  font-family: 'light', sans-serif;
+}
+
+h1, h3 {
+  font-family: 'bold', sans-serif; 
+}
+
+th, td {
+  font-family: 'light', sans-serif;
+}
+
+
+
+.navigation-wrapper {
+  position: relative;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  fill: #00A9FF;
+  cursor: pointer;
+}
+
+.arrow--left {
+  left: 5px;
+}
+
+.arrow--right {
+  left: auto;
+  right: 5px;
+}
+
+
+@layer base {
+  .outerdiv {
+    @apply w-full min-h-screen h-[100vh] bg-white;
+  }
+
+  .primary {
+    @apply bg-[#00A9FF]
+  }
+
+  th {
+    @apply text-black
+  }
+
+  p {
+    @apply text-black
+  }
+
+  h1 {
+    @apply text-5xl text-[#00A9FF]
+  }
+
+  h2 {
+    @apply text-4xl 
+  }
+
+  h3 {
+    @apply text-lg hover:cursor-pointer text-[#00A9FF]
+  }
+
+  p {
+    @apply text-lg hover:cursor-pointer
+  }
+
+  .primaryText {
+    @apply text-[#00A9FF]
+  }
+
+
+}
