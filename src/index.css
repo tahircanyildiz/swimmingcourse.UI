@@ -112,5 +112,40 @@ th, td {
     @apply text-[#00A9FF]
   }
 
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social-links {
+      display: flex;
+      margin-bottom: 10px;
+      
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      font-size: 24px;
+      color: #00A9FF;
+    }
+
+    .follow-text, .rights-text {
+      font-size: 14px;
+      color: #00A9FF;
+      margin-bottom: 5px;
+    }
+  
 
 }

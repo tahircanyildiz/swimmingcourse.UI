@@ -16,6 +16,7 @@ function Home() {
       <AboutPage />
       <Coach/>
       <Contact />
+      <Footer/>
        
     </div>
   )
