@@ -40,7 +40,13 @@ function AddCourse({ selectedDay, selectedHour, onPress }) {
       })
         .catch((error) => {
           toast.error('İstek sırasında bir sorun oluştu daha sonra tekrar deneyin.')
-        });
+        })
+        .finally(() => {
+          // Veri gönderildikten sonra formu temizle
+          setStudentId(null);
+          setTeacherId(null);
+
+        });;
     }
 
   };
@@ -50,7 +56,7 @@ function AddCourse({ selectedDay, selectedHour, onPress }) {
       <div className=' space-y-[6px]'>
         <SearchUserDropdown url={'/api/Users/GetOnlyStudentsByLetter'} setID={setStudentId} />
         <SearchUserDropdown url={'/api/Users/GetOnlyTeachersByLetter'} setID={setTeacherId} />
-        <CustomInput name={"name"} autoComplete={"name"} keyboardType={"default"} rules={{ required: 'name required' }} placeholder={"name"} control={control} />
+        <CustomInput name={"name"} autoComplete={"name"} keyboardType={"default"} rules={{ required: 'name required' }} placeholder={"name"} control={control} type="text" />
         <CustomInput name={"day"} readOnly={true} autoComplete={"day"} placeholder={selectedDay} control={control} />
         <CustomInput name={"hour"} readOnly={true} placeholder={selectedHour} control={control} />
       </div>
