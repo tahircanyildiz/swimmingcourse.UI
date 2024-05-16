@@ -34,7 +34,7 @@ const Signin = () => {
     <div className=' flex flex-col space-y-5'>
       <h1>Log In</h1>
       <CustomInput name={"userNameorEmail"} rules={{ required: 'Email required' }} placeholder={"E-mail"} control={control} type="text" />
-      <CustomInput name={"password"} rules={{ required: 'Password required' }} placeholder={"Password"} control={control} type="password" />
+      <CustomInput name={"password"} eyeIcon={true} onEyeIconPress={eyeIconPressHandler} secureText={secureText} secureTextEntry={secureText} rules={{ required: 'Şifre Gerekli' }} placeholder={"Şifre"} control={control} />
       <div onClick={handleSubmit(onSignInPressed)} className=' p-2 primary text-white flex justify-center items-center rounded-full shadow-md hover:cursor-pointer font-normal'>
         Login
       </div>

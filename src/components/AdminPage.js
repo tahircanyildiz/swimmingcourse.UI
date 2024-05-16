@@ -54,6 +54,8 @@ function AdminPage() {
                                         <>
                                             <div onClick={() => handleChangePage(1)} className={`hover:cursor-pointer text-xs lg:text-sm text-center ${selectedTab === 1 ? 'primaryText ' : ''}`}>Student Management</div>
                                             <div onClick={() => handleChangePage(2)} className={`hover:cursor-pointer text-xs lg:text-sm text-center ${selectedTab === 2 ? 'primaryText ' : ''}`}>Teacher Management</div>
+                                            <div onClick={() => handleChangePage(3)} className={`hover:cursor-pointer text-xs lg:text-sm text-center ${selectedTab === 3 ? 'primaryText ' : ''}`}>Mail Tab</div>
+
                                         </>
                                         :
                                         null
