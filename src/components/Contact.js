@@ -11,7 +11,7 @@ function Contact() {
   const receiveMail = (data) => {
 
     const postData = {
-      to: ["180201025@kocaeli.edu.com"],
+      to: ["kenmiles4145@gmail.com"],
       subject: `${"Ad:" +data.fullName}` + " " + `${"E-mail:" +data.email}` + " " + `${"Telefon:" +data.phone}`,
       body: data.body
     }
@@ -46,8 +46,8 @@ function Contact() {
         <div className=' flex flex-col col-span-1 space-y-6'>
           <div className=' flex flex-col col-span-1 space-y-[6px]'>
             <p>E-mail, call or complete the form to learn how to swim.</p>
-            <p>info@swimmincourse.io</p>
-            <p className=' underline'>321-32132132</p>
+            <p>tahircanyildiz@hotmail.com</p>
+            <p className=' underline'>+90 (545) 318 53 07</p>
           </div>
           <div className=' flex flex-col  space-y-[6px] '>
             <div className=' flex flex-col space-y-[3px]'>

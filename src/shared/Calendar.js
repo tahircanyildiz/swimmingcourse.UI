@@ -16,11 +16,9 @@ import SearchPage from './SearchPage';
 function ServerDay(props) {
     const { day, outsideCurrentMonth, ...other } = props;
     var now = Date.now();
-    // Tarih nesnesini oluştur
     var date = new Date(now);
-    // Gün, ay ve yılı al
     var today = date.getDate();
-    var month = date.getMonth(); // Ay dizinleri 0'dan başlar, bu yüzden +1 ekleyin
+    var month = date.getMonth(); 
     var year = date.getFullYear();
     console.log(day.$y, "-", day.$M, "-", day.$D, "-", today, month, year)
     return (
@@ -38,7 +36,7 @@ function formatDateNowToString() {
     let now = Date.now();
     let date = new Date(now);
     let day = date.getDate().toString().padStart(2, '0');
-    let month = (date.getMonth() + 1).toString().padStart(2, '0'); // Ay 0'dan başlar, bu yüzden +1 ekliyoruz
+    let month = (date.getMonth() + 1).toString().padStart(2, '0'); 
     let year = date.getFullYear().toString();
     let formattedDate = `${day}.${month}.${year}`;
     return formattedDate;
@@ -132,7 +130,6 @@ function Calendar({ isAdmin }) {
                                     width: 1,
                                 },
                                 '.MuiDayCalendar-monthContainer': {
-                                    // Not sure if needed, currently works tho
                                     width: 1,
                                     color: 'black',
 

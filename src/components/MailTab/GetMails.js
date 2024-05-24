@@ -76,14 +76,14 @@ function GetMails() {
                     :
                     <p>Mails Loading...</p>
             }
-            <CustomModal setState={setVisible} visible={visible}>
+            <CustomModal style={{color:'grey'}} setState={setVisible} visible={visible}>
                 {
                     selectedMail ?
-                    <div className=' min-w-96 min-h-96 w-fit h-fit flex flex-col space-y-4'>
-                    <h3>{selectedMail.subject.substring(0, selectedMail.subject.indexOf('E-mail'))}</h3>
-                    <h3>E-mail{selectedMail.subject.substring(selectedMail.subject.indexOf('E-mail') + 'E-mail'.length, selectedMail.subject.indexOf(' ', selectedMail.subject.indexOf('E-mail') + 'E-mail'.length))}</h3>
-                    <h3>{selectedMail.subject.substring(selectedMail.subject.indexOf('com') + 'com'.length, selectedMail.subject.indexOf(' ', selectedMail.subject.indexOf('com') + 'com'.length))}</h3>                            
-                     <h3>Mesaj:{selectedMail.body}</h3>
+                    <div style={{color:'grey'}} className=' min-w-96 min-h-96 w-fit h-fit flex flex-col space-y-4'>
+                    <h3 style={{color:'black'}}>{selectedMail.subject.substring(0, selectedMail.subject.indexOf('E-mail'))}</h3>
+                    <h3 style={{color:'black'}}>E-mail{selectedMail.subject.substring(selectedMail.subject.indexOf('E-mail') + 'E-mail'.length, selectedMail.subject.indexOf(' ', selectedMail.subject.indexOf('E-mail') + 'E-mail'.length))}</h3>
+                    <h3 style={{color:'black'}} >{selectedMail.subject.substring(selectedMail.subject.indexOf('com') + 'com'.length, selectedMail.subject.indexOf(' ', selectedMail.subject.indexOf('com') + 'com'.length))}</h3>                            
+                     <h3 style={{color:'red'}}>{selectedMail.body}</h3>
                 </div>
                         :
                         <p>Loading...</p>

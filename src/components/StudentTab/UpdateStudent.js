@@ -39,10 +39,10 @@ function UpdateStudent({ id }) {
   return (
     <>
       <div className=' space-y-[6px]'>
-        <CustomInput name={"username"} autoComplete={"username"} keyboardType={"default"}  placeholder={"Username"} control={control} />
-        <CustomInput name={"email"} autoComplete={"email"}  placeholder={"E-mail Address"} control={control} />
-        <CustomInput name={"phoneNumber"} autoComplete={"phone"}  placeholder={"Phone Number"} control={control} />
-        <CustomInput name={"field"} autoComplete={"field"} keyboardType={"default"} placeholder={"field"} control={control} />
+        <CustomInput name={"username"} autoComplete={"username"} keyboardType={"default"}  placeholder={"Username"} control={control} type="text" />
+        <CustomInput name={"email"} autoComplete={"email"}  placeholder={"E-mail Address"} control={control} type="text"/>
+        <CustomInput name={"phoneNumber"} autoComplete={"phone"}  placeholder={"Phone Number"} control={control} type="text"/>
+        <CustomInput name={"field"} autoComplete={"field"} keyboardType={"default"} placeholder={"field"} control={control} type="text"/>
       </div>
       <div onClick={handleSubmit(handlePutStudent)} className=' mt-[6px] p-2 primary text-white flex justify-center items-center rounded-full shadow-md hover:cursor-pointer font-normal'>
         Update Student
